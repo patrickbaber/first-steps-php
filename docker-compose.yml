@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+  nginx:
+    image: nginx:1.13-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+  mysql:
+    image: mariadb:10.3
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=db
+      - MYSQL_PASSWORD=db
+    ports:
+      - "3306:3306"
