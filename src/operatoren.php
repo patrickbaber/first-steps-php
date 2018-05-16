@@ -12,3 +12,8 @@ echo $zahl1 - $zahl2 . '<br>';
 echo $zahl1 * $zahl2 . '<br>';
 echo $zahl1 / $zahl2 . '<br>';
 echo $zahl1 % $zahl2 . '<br>';
+echo ++$zahl1 . '<br>';
+echo $zahl1++ . '<br>';
+echo $zahl1 . '<br>';
+echo --$zahl1 . '<br>';
+echo $zahl1-- . '<br>';
