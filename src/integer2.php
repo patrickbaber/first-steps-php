@@ -5,8 +5,11 @@
 //echo ceil(pi());
 //echo round(pi(), 2);
 
-$nettoPreis = 17.93;
-$mwstFaktor = 1.19;
+$nettoPreis  = 15.45;
+$mwstFaktor  = 1.07;
 $bruttoPreis = $nettoPreis * $mwstFaktor;
+$gerundeterBruttoPreis = round($bruttoPreis, 2);
+$deutscherPreis = str_replace('.', ',', $gerundeterBruttoPreis);
+$preis = $deutscherPreis . ' €';
 
-echo $bruttoPreis;
+echo $preis;
