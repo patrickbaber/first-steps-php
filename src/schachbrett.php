@@ -1,7 +1,7 @@
 <?php
 
-$x = 8;
-$y = 8;
+$maxSpalten = 8;
+$maxZeilen  = 8;
 
 ?><!DOCTYPE html>
 <html>
@@ -22,17 +22,17 @@ $y = 8;
     </head>
     <body>
         <table>
-            <?php for ($i = 0; $i < $y; $i++) { ?>
+            <?php for ($zeile = 0; $zeile < $maxZeilen; $zeile++): ?>
             <tr>
-                <?php for ($j = 0; $j < $x; $j++) { ?>
-                    <?php if (($j + $i) % 2 == 1) { ?>
+                <?php for ($spalte = 0; $spalte < $maxSpalten; $spalte++): ?>
+                    <?php if (($spalte + $zeile) % 2 == 1): ?>
                         <td class="black"></td>
-                    <?php } else { ?>
+                    <?php else: ?>
                         <td class="white"></td>
-                    <?php } ?>
-                <?php } ?>
+                    <?php endif; ?>
+                <?php endfor; ?>
             </tr>
-            <?php } ?>
+            <?php endfor; ?>
         </table>
     </body>
 </html>
