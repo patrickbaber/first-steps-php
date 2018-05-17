@@ -2,6 +2,11 @@
 
 function preisFormattierung($nettoPreis, $mwstFaktor)
 {
+    // der Nettopreis unter 20 € ist...
+    if ($nettoPreis < 20) {
+        //... dann 5 € dazu addieren
+        $nettoPreis = $nettoPreis + 5;
+    }
     $bruttoPreis = $nettoPreis * $mwstFaktor;
     $gerundeterBruttoPreis = round($bruttoPreis, 2);
     $deutscherPreis = str_replace('.', ',', $gerundeterBruttoPreis);
