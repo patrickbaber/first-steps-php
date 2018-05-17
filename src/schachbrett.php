@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+
+$x = 8;
+$y = 8;
+
+?><!DOCTYPE html>
 <html>
     <head>
         <title>Schach-WM 2018</title>
@@ -17,21 +22,17 @@
     </head>
     <body>
         <table>
+            <?php for ($i = 0; $i < $y; $i++) { ?>
             <tr>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
+                <?php for ($j = 0; $j < $x; $j++) { ?>
+                    <?php if (($j + $i) % 2 == 1) { ?>
+                        <td class="black"></td>
+                    <?php } else { ?>
+                        <td class="white"></td>
+                    <?php } ?>
+                <?php } ?>
             </tr>
-            <tr>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-            </tr>
-            <tr>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-            </tr>
+            <?php } ?>
         </table>
     </body>
 </html>
